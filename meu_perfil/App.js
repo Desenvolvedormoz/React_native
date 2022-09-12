@@ -20,9 +20,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fcc',
+    backgroundColor: '#F2DCF1',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: 0,
+    padding: 0,
   },
 
   fotoPerfil: {
@@ -33,7 +35,10 @@ const styles = StyleSheet.create({
 
   perfil: {
     padding: 20,
-    alignItems: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F2DCF1',
+    flex: 1,
   },
 
   nome: {
@@ -43,13 +48,13 @@ const styles = StyleSheet.create({
   },
 
   img: {
-    width: 300,
-    height: 200,
+    width:320,
+    flex: 1,
   },
 
   texto: {
-    fontSize: 20,
+    fontSize: 18,
     textAlign: 'center',
-    marginTop: 16,
+    marginTop: 20,
   }
 });
