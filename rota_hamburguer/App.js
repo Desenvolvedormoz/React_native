@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+
+import { NavigationContainer } from '@react-navigation/native';
+
+import { createDrawerNavigator} from '@react-navigation/drawer';
+
+import TelaInicial from './componentes/TelaInicial';
+import TelaSecundaria from './componentes/TelaSecundaria';
+import TelaTercearia from './componentes/TelaTercearia';
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Drawer.Navigator>
+       <Drawer.Screen name='Início' component={TelaInicial}/>
+      <Drawer.Screen name='Página2' component={TelaSecundaria}/>
+      <Drawer.Screen name='Página3' component={TelaTercearia}/>
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
