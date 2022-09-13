@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Button, View, Text } from 'react-native';
 
-export default function TelaInicial(){
+export default function TelaInicial(props){
     return(
         <View>
             <Text>Texto inicial</Text>
+            <Button title="Início" onPress={()=>{props.Navigation.navigate('Início')}}/>
         </View>
     )
 }
